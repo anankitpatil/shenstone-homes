@@ -1,0 +1,244 @@
+html, body{margin:0px;padding:0px;font-family:Helvetica, Arial, sans-serif;font-size:15px}
+
+a{text-decoration:none}
+ul,ol{padding:0px;margin:0px}
+ul li{list-style-type:none}
+h1{text-transform:uppercase;font-size:21px;margin:24px 0}
+p{margin:0 24px 24px 0}}
+input,textarea{-moz-box-sizing:border-box;-webkit-box-sizing:border-box;box-sizing:border-box}
+.banner{position:relative;overflow:auto;margin-top:24px}
+.banner .left,.banner .right{display:block;width:32px;height:32px;padding:5px 3px 5px 7px;border-radius:21px;position:absolute;z-index:2;cursor:pointer;right:24px;background:rgba(255,255,255,0.1)}
+.banner .left:hover,.banner .right:hover{background:rgba(255,255,255,0.5)}
+.banner .left{-webkit-transform:rotate(-180deg);left:24px}
+.banner ul{z-index:1}
+.banner ul li{list-style:none;float:left}
+.banner ul li img{width:100%;height:auto}
+.banner .dots{position:absolute;bottom:12px;left:15px;z-index:3}
+.banner .dots li{list-style:none;display:inline-block;height:12px;width:12px;margin-right:6px;border-radius:6px;background:rgba(0,0,0,0.33);cursor:pointer}
+.banner .dots li:hover{background:rgba(255,255,255,0.3)}
+.banner .dots li.active{background:rgba(0,0,0,1)}
+figure{width:100%;overflow:hidden;margin:24px 24px 0 0}
+figure img{width:100%;height:auto}
+img{vertical-align:top}
+.ilink{position:relative}
+.ilink span{position:absolute;bottom:24px;left:24px;font-size:12px;text-transform:uppercase;font-weight:bold;color:rgba(255,255,255,1)}
+.ilink:hover figure{-webkit-transform:scale(.9)}
+.ilink:hover span{-webkit-transform:scale(1.2);margin-left:24px}
+.navigation ul li,.navigation ul li a,.ilink figure,.ilink span,input,textarea,.over a,#lettings .allprops .one a,.overlay-menu ul li{-webkit-transition:all 300ms ease-out;-moz-transition:all 300ms ease-out;-o-transition:all 300ms ease-out;transition:all 300ms ease-out}
+
+.overlay-menu{border-top:6px solid rgba(224,238,240,1);border-left:1px solid #B5B5B5;overflow:scroll;background:#FFFFFF;width:239px;height:100%;position:absolute;right:-240px;top:0px;display:none}
+.overlay-menu ul li{border-bottom:1px solid #DBDBDB;padding:12px}
+.overlay-menu ul li:hover{background:#DDDDDD}
+.overlay-menu ul li a{color:#000000;display:block}
+.overlay-menu ul .lvl2 a{color:#4F4F4F;padding-left:24px}
+
+.header .length{background:rgba(224,238,240,1);height:6px}
+.header .logo{height:270px;background:rgb(43,43,43);background:-moz-linear-gradient(top,rgba(43,43,43,1) 0%,rgba(33,33,33,1) 100%);background:-webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(43,43,43,1)), color-stop(100%,rgba(33,33,33,1)));background:-webkit-linear-gradient(top,rgba(43,43,43,1) 0%,rgba(33,33,33,1) 100%);background:-o-linear-gradient(top,rgba(43,43,43,1) 0%,rgba(33,33,33,1) 100%);background:-ms-linear-gradient(top,rgba(43,43,43,1) 0%,rgba(33,33,33,1) 100%);background:linear-gradient(to bottom,rgba(43,43,43,1) 0%,rgba(33,33,33,1) 100%);filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#2b2b2b',endColorstr='#212121',GradientType=0);position:relative;overflow:hidden}
+.header .mobile{display:none;height:78px;background:#000000}
+.header .mobile .mobile-logo{width:344px;margin:0px;display:inline-block;vertical-align:top}
+.header .mobile .small-logo{width:172px;margin:0px;vertical-align:top;display:none}
+.mobile .menu-button{display:inline-block;line-height:78px;color:#FFFFFF;float:right;margin-right:24px}
+.header .logo img{position:absolute;top:0px;left:50%;margin-left:-480px;z-index:2}
+.header .logo .cover{width:100%;height:auto;margin-left:0px;left:0px;z-index:1}
+.header .navigation{height:48px;background:rgba(0,0,0,1);display:block}
+.header .navigation ul{display:table;table-layout:fixed;width:1024px;margin:0 auto}
+.header .navigation ul li{display:inline-block;position:relative;text-align:center;padding:0 19px}
+.header .navigation ul li a{color:rgba(255,255,255,1);text-transform:uppercase;line-height:48px;display:block}
+.header .navigation ul li:hover a{color:rgba(255,255,255,0.66)}
+.header .navigation ul li .dropdown{width:240px;background:rgba(0,0,0,1);display:none;z-index:2}
+.header .navigation ul li:hover .dropdown{display:block;position:absolute;left:0px}
+.header .navigation ul li .dropdown li{display:block;width:100%;padding:0px}
+.header .navigation ul li .dropdown li a{color:rgba(255,255,255,1)}
+.header .navigation ul li .dropdown li:hover a{color:rgba(255,255,255,0.66)}
+
+.wrapper{max-width:1024px;margin:0 auto}
+.wrapper .one{width:25%;display:inline-block;vertical-align:top}
+.wrapper .two{width:50%;display:inline-block;vertical-align:top}
+.wrapper .three{width:75%;display:inline-block;vertical-align:top}
+.wrapper .four{width:100%}
+.wrapper .third{width:33.33333333%;display:inline-block}
+.wrapper .sixth{width:66.66666666%;display:inline-block}
+
+#home .one .ilink figure{width:calc(100% - 24px)}
+#home .three{overflow:hidden;margin-bottom:24px}
+#home .three .banner ul li{height:617px;overflow:hidden}
+#home .three .left,#home .three .right{top:300px}
+
+#bespoke .two{margin-bottom:24px}
+
+#extensions .two{margin-bottom:24px}
+#extensions .two .banner ul li{height:387px;overflow:hidden}
+#extensions .two .left,#extensions .two .right{top:180px}
+
+#kitchens .two{margin-bottom:24px}
+#kitchens .two .banner ul li{height:344px;overflow:hidden}
+#kitchens .two .left,#kitchens .two .right{top:150px}
+
+#wetrooms .two{margin-bottom:24px}
+#wetrooms .two .banner ul li{height:384px;overflow:hidden}
+#wetrooms .two .left,#wetrooms .two .right{top:165px}
+
+#remodelling .two{margin-bottom:24px}
+#remodelling .two .banner ul li{height:341px;overflow:hidden}
+#remodelling .two .left,#remodelling .two .right{top:150px}
+
+#new .two{margin-bottom:24px}
+#new .two .banner ul li{height:341px;overflow:hidden}
+#new .two .left,#new .two .right{top:150px}
+
+#lettings .two{margin-bottom:24px}
+#lettings .two ul{list-style:circle}
+#lettings .two ul li{list-style:circle;margin:6px 0 0 24px}
+#lettings .allprops {vertical-align:top}
+#lettings .allprops figure{height:192px;overflow:hidden;width:calc(100% - 12px);margin-left:6px;padding-top:6px}
+#lettings .allprops figure img{height:100%;width:auto}
+#lettings .allprops .one a{display:block}
+#lettings .allprops .one a:hover{background:#F4F4F4}
+#lettings .allprops .one a h2{font-size:21px;font-weight:400;color:#000000;margin-right:6px;margin-left:6px}
+#lettings .allprops .one a h2 span{font-size:12px;font-weight:100;color:#CCCCCC}
+#lettings .allprops .one a h3{color:#508B36;margin-left:6px;padding-bottom:6px}
+
+#property .two h1{text-transform:none;font-size:36px;font-weight:400;margin:48px 0 0 48px}
+#property .two h1 span{font-size:21px;font-weight:100;color:#CCCCCC}
+#property .two p{font-size:18px;font-weight:400;margin:12px 0 0 48px}
+#property .two h3{color:#508B36;font-size:27px;margin:24px 0 0 48px}
+#property .two input{font-size:18px;padding:6px 24px;margin:24px 0 0 48px;border:1px solid #CCCCCC;cursor:pointer;color:#FFFFFF;border:1px solid #518A44;background:#5AAB56}
+#property .two input:hover{background:#7AC676}
+#property .four .banner{margin-bottom:24px}
+#property .four .banner ul li{height:600px}
+#property .four .banner .left,#property .four .banner .right{top:285px}
+
+#gallery .four{margin-bottom:24px}
+#gallery .four figure{width:calc(33.3333333% - 16px);display:inline-block;cursor:pointer}
+#gallery .four figure:nth-child(3n){margin-right:0px}
+
+#holiday .two{margin-bottom:24px}
+
+#contact .map{width:calc(100% - 24px);height:305px}
+#contact .form-container .cmxform p{position:relative;display:block}
+#contact .form-container .cmxform label{display:block}
+#contact .form-container .cmxform input, #contact .form-container .cmxform textarea{width:360px;border:1px solid rgba(0,0,0,0.33);font-size:15px;padding:3px 5px;z-index:0;resize:none}
+#contact .form-container .cmxform input:hover, #contact .form-container .cmxform textarea:hover{border-color:#518A44}
+#contact .form-container .cmxform .submit,#wireframe .wireframe-form .submit{width:120px;text-transform:uppercase;padding:6px 12px;cursor:pointer;border-color:#518A44;background:#5AAB56;color:#FFFFFF}
+#contact .form-container .cmxform .submit:hover,#wireframe .wireframe-form .button:hover{background:#7AC676}
+#contact .form-container .cmxform div.error{position:absolute;color:#DA5759;font-size:12px;font-weight:100}
+
+#admin{padding-top:48px;text-align:center}
+#admin .third,#admin .sixth,#admin .other{text-align:left}
+#admin label{width:100%;display:block}
+#admin .login input,#admin .register input{width:100%;font-size:15px;padding:6px 9px;margin-bottom:24px}
+#admin .login .button,#admin .login .register,#admin .register .button,#admin .register .back{display:inline-block;margin-bottom:75px}
+#admin .login .register,#admin .register .back{line-height:36px;color:#5AAB56}
+#admin .login .register:hover,#admin .register .back:hover{color:#7AC676}
+#admin .login .button,#admin .register .button{width:96px;border:1px solid #518A44;background:#5AAB56;color:#FFFFFF;float:right;cursor:pointer}
+#admin .login .button:hover,#admin .register .button:hover{background:#7AC676}
+#admin .nav{border-bottom:1px solid #CCCCCC;text-align:left;line-height:24px}
+#admin .nav a{float:right}
+#admin .third,#admin .sixth{vertical-align:top}
+#admin .add{margin-top:24px;position:relative;border-bottom:1px solid #CCCCCC;padding-bottom:12px;margin-bottom:12px}
+#admin .hidden{display:none}
+#admin .add-form input[type="file"]{border:none;padding:6px 0px}
+#admin .add-form input,#admin .add-form textarea{font-size:15px;padding:3px 6px;border:1px solid #CCCCCC;margin-bottom:12px;width:calc(100% - 12px)}
+#admin .add-form .imagery_1{width:100%;display:block}
+#admin .add-form .imagery_1 img{width:calc(100% - 12px);height:auto;margin-top:2px}
+#admin .add-form .other a{width:100%}
+#admin .add-form .other a img{width:calc(100% - 12px);margin-right:12px;margin-top:12px}
+#admin .add-form .other .one:last-of-type a img{width:100%}
+#admin .add-form .cancel,#admin .add-form .save{width:96px;padding:6px 9px;margin:12px;cursor:pointer}
+#admin .add-form .cancel{background:#DEDEDE;color:#FFFFFF}
+#admin .add-form .save{background:#5AAB56;color:#FFFFFF;border:1px solid #518A44}
+#admin .add-form .cancel:hover{background:#CCCCCC}
+#admin .add-form .save:hover{background:#7AC676}
+#admin .add .subtract{height:100%;width:100%;position:absolute;top:0px;background:rgba(255,255,255,0.9);display:none}
+#admin .item{margin-bottom:24px;border-bottom:1px solid #EFEFEF;padding-bottom:12px;margin-bottom:12px}
+#admin .item .mainimg{width:33.3333333%;display:inline-block;vertical-align:top}
+#admin .item .mainimg figure{margin:0px}
+#admin .item .mainimg figure img{width:100%;height:auto}
+#admin .item .alltext{width:33.3333333%;display:inline-block;vertical-align:top;text-align:left}
+#admin .item .alltext h2{font-size:21px;font-weight:400;margin:12px 0 0 12px}
+#admin .item .alltext h2 span{font-size:12px;color:#8C8C8C}
+#admin .item .alltext h3{color:#508B36;margin:6px 0 0 12px}
+#admin .item .alltext p{font-weight:100;margin:9px 0 18px 12px}
+#admin .item .alltext a{margin:0 0 0 1px;padding:6px 9px;color:#FFFFFF}
+#admin .item .alltext .edit{margin:0 0 0 12px;background:rgba(49,129,174,1.00)}
+#admin .item .alltext .linky{background:rgba(159,184,61,1.00)}
+#admin .item .alltext .delete{background:rgba(184,70,61,1.00)}
+#admin .item .alltext .edit:hover{background:rgba(49,129,174,0.75)}
+#admin .item .alltext .linky:hover{background:rgba(159,184,61,0.75)}
+#admin .item .alltext .delete:hover{background:rgba(184,70,61,0.75)}
+#admin .item .rest{width:33.3333333%;display:inline-block;vertical-align:top}
+#admin .item .rest figure{width:50%;display:inline-block;margin:0px}
+#admin .item .rest figure img{width:100%;height:auto;margin:0 0 6px 6px}
+#admin .hiddenitem{display:none}
+
+.footer{background:rgba(0,0,0,1);text-align:center;padding-top:24px;height:210px;overflow:hidden;position:relative;background:rgb(43,43,43);background:-moz-linear-gradient(top,rgba(43,43,43,1) 0%,rgba(33,33,33,1) 100%);background:-webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(43,43,43,1)), color-stop(100%,rgba(33,33,33,1)));background:-webkit-linear-gradient(top,rgba(43,43,43,1) 0%,rgba(33,33,33,1) 100%);background:-o-linear-gradient(top,rgba(43,43,43,1) 0%,rgba(33,33,33,1) 100%);background:-ms-linear-gradient(top,rgba(43,43,43,1) 0%,rgba(33,33,33,1) 100%);background:linear-gradient(to bottom,rgba(43,43,43,1) 0%,rgba(33,33,33,1) 100%);filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#2b2b2b',endColorstr='#212121',GradientType=0)}
+.footer .over{z-index:2;display:block;width:100%;position:absolute}
+.footer .over a{display:block;margin:36px auto}
+.footer .over a:hover{opacity:0.66}
+.footer .over .copy{color:rgba(255,255,255,0.66);font-size:12px;line-height:48px;width:100%;font-weight:100}
+.footer .cover{width:100%;position:absolute;bottom:0px;left:0px;z-index:1}
+
+#wireframe{position:fixed;left:0px;top:0px;background:rgba(0,0,0,0.9);opacity:0;display:none;z-index:100;}
+#wireframe img{position:absolute;width:100%;height:auto;left:50%;top:50%;-webkit-transform:translate(-50%, -50%)}
+#wireframe .wireframe-form{position:absolute;left:50%;top:50%;background:#FFFFFF;padding:12px;height:300px;width:300px;margin-left:-162px;margin-top:-162px}
+#wireframe .wireframe-form p{margin:0 0 12px 0}
+#wireframe .wireframe-form input,#wireframe .wireframe-form textarea{width:calc(100% - 15px);font-size:15px;padding:3px 6px}
+#wireframe .wireframe-form .submit{border-width:1px;border:solid}
+#wireframe .wireframe-form div.error{position:absolute;color:#DA5759;font-size:12px;font-weight:100}
+
+@media only screen and (max-width : 1024px) {
+.header .mobile{display:block}
+.header .logo,.header .navigation{display:none}
+#home .one{width:100%}
+#home .one .ilink{width:25%;display:inline-block}
+#home .one .ilink figure{margin:24px 12px 0}
+#home .three{width:calc(100% - 24px);margin:0 12px 24px}
+#about .two,#bespoke .two,#extensions .two,#loft .two,#kitchens .two,#wetrooms .two,#remodelling .two,#new .two,#lettings .two,#property .two,#holiday .two{width:calc(100% - 24px);margin:0px 12px}
+#about .two figure,#bespoke .two figure,#loft .two figure,#lettings .two figure,#holiday .two figure{margin:0 0 24px 0}
+#extensions .banner,#kitchens .banner,#wetrooms .banner,#remodelling .banner,#new .banner{margin:0 0 24px 0}
+#lettings .two ul{margin:0 0 24px 0}
+#property .two h1,#property .two p,#property .two h3{margin-left:0px;text-align:center}
+#property .two form{text-align:center}
+#property .two input{margin:24px auto 0}
+#property .four{margin:0 12px;width:calc(100% - 24px)}
+#property .four .banner ul li{height:480px}
+#property .four .banner .left,#property .four .banner .right{top:224px}
+#gallery .four{width:calc(100% - 24px);margin:0 12px 24px}
+#contact .one{width:calc(100% - 24px);margin:0 12px}
+#contact .one .adr,#contact .one .map{width:50%;margin:24px 0 0 0;display:inline-block;vertical-align:top}
+#contact .three{margin:0 12px;width:calc(100% - 24px)}
+#contact .two{width:calc(100% - 24px);margin:0 12px}
+.footer{height:192px}
+.footer .over a{margin:30px auto}
+}
+
+@media only screen and (max-width : 768px) {
+#home .one .ilink{width:50%;display:inline-block}
+#home .three .banner ul li{height:480px;overflow:hidden}
+#home .three .left,#home .three .right{top:224px}
+#lettings .allprops{width:calc(100% - 24px);margin:0 12px}
+#lettings .allprops .one{width:50%}
+#lettings .allprops .one a figure{margin-top:0px}
+#lettings .allprops .one a figure img{width:100%;height:auto}
+#property .four .banner ul li{height:360px}
+#property .four .banner .left,#property .four .banner .right{top:164px}
+#gallery .four figure{width:calc(50% - 12px);display:inline-block}
+#gallery .four figure:nth-child(3){margin-right:24px}
+#gallery .four figure:nth-child(2n){margin-right:0px}
+.footer{padding:0px;height:180px}
+.footer .over a{margin:27px auto}
+.footer .cover{height:100%;width:auto;top:0px}
+}
+
+@media only screen and (max-width : 480px) {
+.header .mobile .mobile-logo{display:none}
+.header .mobile .small-logo{display:inline-block}
+#home .three .banner ul li{height:300px;overflow:hidden}
+#home .three .left,#home .three .right{top:134px}
+#lettings .allprops .one a figure{height:120px}
+#lettings .allprops .one a h2,#lettings .allprops .one a h3{font-size:15px}
+#property .four .banner ul li{height:270px}
+#property .four .banner .left,#property .four .banner .right{top:119px}
+.footer{height:150px}
+.footer .over a{margin:18px auto}
+}
