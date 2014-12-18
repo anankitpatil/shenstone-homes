@@ -1,8 +1,11 @@
+<link type="text/css" rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/normalize/3.0.1/normalize.min.css" />
 <link type="text/css" rel="stylesheet" href="http://localhost/shenstone-homes/css/styles.css" />
+<link href="favicon.ico" rel="shortcut icon" type="image/x-icon">
 <script type="text/javascript" src="http://localhost/shenstone-homes/js/jquery-2.1.1.min.js"></script>
 <script type="text/javascript" src="http://localhost/shenstone-homes/js/unslider.min.js"></script>
 <script type="text/javascript" src="http://localhost/shenstone-homes/js/jquery.validate.min.js"></script>
 <script type="text/javascript" src="http://localhost/shenstone-homes/js/jquery.autosize.min.js"></script>
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
 <script type="text/javascript" src="http://localhost/shenstone-homes/js/scripts.js"></script>
 </head>
 <body>
@@ -12,7 +15,7 @@
       <div class="mobile">
         <figure class="mobile-logo"><img src="http://localhost/shenstone-homes/assets/logo_.png"></figure>
         <figure class="small-logo"><img src="http://localhost/shenstone-homes/assets/logo__.png"></figure>
-        <a href="#" class="menu-button">Menu</a>
+        <a href="#" class="menu-button">&nbsp;</a>
       </div>
       <div class="logo"><img src="http://localhost/shenstone-homes/assets/logo.png" /><img class="cover" src="http://localhost/shenstone-homes/assets/repeat.png" /></div>
       <nav class="navigation">

@@ -3,7 +3,7 @@ define("UPLOAD_DIR", "/Applications/XAMPP/xamppfiles/htdocs/shenstone-homes/uplo
 if(isset($_REQUEST))
 {
 	$connection = mysql_connect('localhost', 'root', '');
-	mysql_select_db('shenstone-homes', $connection);
+	mysql_select_db('agriwash', $connection);
 	error_reporting(E_ALL && ~E_NOTICE);
 	
 	$title = $_POST['title'];
@@ -35,7 +35,7 @@ if(isset($_REQUEST))
 		}
 	}
 	
-	$sql = "INSERT INTO properties (title, price, content, image_1, image_2, image_3, image_4, image_5) VALUES ('$title', '$price', '$content', '$names[1]', '$names[2]', '$names[3]', '$names[4]', '$names[5]')";
+	$sql = "INSERT INTO sh_properties (title, price, content, image_1, image_2, image_3, image_4, image_5) VALUES ('$title', '$price', '$content', '$names[1]', '$names[2]', '$names[3]', '$names[4]', '$names[5]')";
 	$result = mysql_query($sql);
 	if($result){
 		echo "Property added.";

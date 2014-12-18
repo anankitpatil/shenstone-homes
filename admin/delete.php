@@ -3,12 +3,12 @@ define("UPLOAD_DIR", "/Applications/XAMPP/xamppfiles/htdocs/shenstone-homes/uplo
 if(isset($_POST['id']))
 {
 	$connection = mysql_connect('localhost', 'root', '');
-	mysql_select_db('shenstone-homes', $connection);
+	mysql_select_db('agriwash', $connection);
 	error_reporting(E_ALL && ~E_NOTICE);
 	
 	$id = $_POST['id'];
-	$query = "DELETE FROM properties WHERE id=$id";
-	$getquery = "SELECT * FROM properties WHERE id=$id LIMIT 1";
+	$query = "DELETE FROM sh_properties WHERE id=$id";
+	$getquery = "SELECT * FROM sh_properties WHERE id=$id LIMIT 1";
 	$temp = mysql_query($getquery);
 	while($news = mysql_fetch_array($temp)) { 
 		for($i = 1; $i <= 5; $i++) {

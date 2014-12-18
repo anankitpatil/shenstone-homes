@@ -29,7 +29,7 @@ class Login
             if (!$this->db_connection->connect_errno) {
                 $user_name = $this->db_connection->real_escape_string($_POST['user_name']);
                 $sql = "SELECT user_name, user_email, user_password_hash
-                        FROM users
+                        FROM sh_users
                         WHERE user_name = '" . $user_name . "' OR user_email = '" . $user_name . "';";
                 $result_of_login_check = $this->db_connection->query($sql);
                 if ($result_of_login_check->num_rows == 1) {

@@ -1,0 +1,1 @@
+﻿<?xml version="1.0" encoding="utf-8" ?><info>	<infoitem key="UD_XAMPPRecordset" value="name:id;datatype:int,name:title;datatype:blob,name:price;datatype:blob,name:content;datatype:blob,name:image_1;datatype:blob,name:image_2;datatype:blob,name:image_3;datatype:blob,name:image_4;datatype:blob,name:image_5;datatype:blob,name:modified;datatype:timestamp" /></info>

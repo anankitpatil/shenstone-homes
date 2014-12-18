@@ -1,5 +1,6 @@
 <?php include '../meta.php'; ?>
 <title>Shenstone Homes | Lettings & Management</title>
+<meta name="description" content="Shenstone Homes is a propert management and lettings agency combining the expert know-how of experienced property professionals and backed up with chartered consultants. Specifically designed to help you capture the most profitable returns on your buy-to-let investments. Our expertise and assistance, as and when you need, it is a completely flexible service tailored to suit your requirements">
 <?php include '../header.php'; ?>
 <div class="wrapper" id="lettings">
   <div class="two">
@@ -20,14 +21,14 @@
       <li>FREE no-obligation consultation</li>
     </ul>
   </div><div class="two">
-    <figure><img src="../assets/about_s.jpg" /></figure>
+    <figure><img src="../assets/about_s.jpg" alt="Shenstone Homes Properties. Management and letting. Design and build. Properties to Let managed by shenstone" /></figure>
   </div>
   <div class="four allprops">
     <?php include '../admin/all.php';
 	while($news = mysql_fetch_array($data)) { ?><div class="one" id="<?php echo $news['id']; ?>">
         <?php $esc = mysql_real_escape_string($news['title']); $string = str_replace(' ', '-', $esc); ?>
-        <a href="<?php echo $string; ?>">
-          <figure><img src="http://localhost/shenstone-homes/uploads/<?php echo $news['image_1']; ?>" /></figure>
+        <a href="<?php echo $string; ?>" title="Shenstone Homes Properties. Management and letting. Design and build. <?php echo $news['title']; ?>">
+          <figure><img src="http://localhost/shenstone-homes/uploads/<?php echo $news['image_1']; ?>" alt="Shenstone Homes Properties. Management and letting. Design and build. <?php echo $news['title']; ?>" /></figure>
           <h2><?php echo $news['title']; ?><br /><span><?php echo substr($news['modified'], 0, 10); ?></span></h2>
           <h3><?php echo $news['price']; ?></h3>
           <!--<p><?php //echo nl2br($news['content']); ?></p>-->

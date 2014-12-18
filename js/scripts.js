@@ -6,12 +6,24 @@ $(document).ready(function() {
 	//Sliders
 	var unslider;
 	if($('.banner').length){
-		unslider = $('.banner').unslider({dots: true, delay: 3000});
+		unslider = $('.banner').unslider({dots: true, delay: 3000, fluid: true});
 		$('.banner .left').click(function(){ unslider.data('unslider').prev() });
 		$('.banner .right').click(function(){ unslider.data('unslider').next() });
 	}
 	//Mobile Slim Menu
 	$('.navigation').mobileMenu();
+	//Adjust footer
+	$(window).load(function(){
+		if($(window).height() > $('body').height()){
+			var shft = $(window).height() - $('body').height();
+			if(shft > 0){
+				$('.footer').css('margin-top', shft + 'px')
+			}
+			$(window).resize(function(){
+				$('.footer').css('margin-top', ($(window).height() - $('body').height()) + 'px')
+			});
+		}
+	});
 	//Gallery
 	if($('#gallery').length){
 		$('#gallery .four figure').click(function(){
@@ -24,13 +36,14 @@ $(document).ready(function() {
 			});
 		});
 	}
-	//Property Enquiry form
+	//Property & Holiday Enquiry form
 	if($('#property').length){ $('#property .enquire').enquire() }
+	if($('#holiday').length){ $('#holiday .enquire').enquire() }
 	//Contact form
 	if($('#contact').length){ loadScript(); $('#commentForm').validate({
   		errorElement: 'div',
 		submitHandler: function(form) {$.ajax({
-			url : 'http://localhost/shenstone-homes/scripts/mail.php',
+			url : '../scripts/mail.php',
 			data : $('#commentForm').serialize(),
 			type: 'POST',
 			success : function(data){
@@ -50,11 +63,23 @@ $(document).ready(function() {
 //Contact Map
 function initialize() {
   var mapOptions = {
-    zoom: 8,
-    center: new google.maps.LatLng(-34.397, 150.644)
+    zoom: 15,
+    center: new google.maps.LatLng(53.4220579, -3.0720576)
   };
-  var map = new google.maps.Map(document.getElementById('map-canvas'),
-      mapOptions);
+  
+  var map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
+
+  var infowindow = new google.maps.InfoWindow({
+    content: '<center><b>Shenstone Homes</b><br />127 Leasowe Road<br />Wallasey<br />Wirral<br />CH45 8PA</center>'
+  });
+  var marker = new google.maps.Marker({
+      position: mapOptions.center,
+      map: map,
+      title: 'Shenstone Homes'
+  });
+  google.maps.event.addListener(marker, 'click', function() {
+    infowindow.open(map,marker);
+  });
 }
 function loadScript() {
   var script = document.createElement('script');
@@ -93,16 +118,17 @@ function loadScript() {
 	});
 	$(this).submit(function(e){
 		e.preventDefault();
-		var formData = new FormData($(this)[0]);
 		
 		$('.subtract').css('display', 'block');
 		$('.subtract').animate({'opacity': 1}, 250);
+		
+		var formData = new FormData($(this)[0]);	
 		
 		$.ajax({
 			url: 'add.php',
 			data: formData,
 			type: 'POST',
-			async: false,
+			async: true,
 			success: function(data){
 			  $.get('last.php', function(response){
 				$('.item .delete').unbind('click');
@@ -161,17 +187,18 @@ function loadScript() {
 			
 			$theForm.find('.add-form').submit(function(e){
 				e.preventDefault();
-				var formData = new FormData($(this)[0]);
-				formData.append('id', id);
 				
 				$('.subtract').css('display', 'block');
 				$('.subtract').animate({'opacity': 1}, 250);
+				
+				var formData = new FormData($(this)[0]);
+				formData.append('id', id);
 		
 				$.ajax({
 					url: 'update.php',
 					data: formData,
 					type: 'POST',
-					async: false,
+					async: true,
 					success: function(data){
 					  alert(data);
 					  $.get('last.php', function(response){
@@ -236,6 +263,7 @@ function loadScript() {
 	//Set click functions
 	$('.mobile .menu-button').click(function(){
 		if(open == false){
+			$('.menu-button').addClass('open');
 			$('.container').stop().animate({'margin-left': '-240px', 'opacity': 0.3333333}, 300, function(){
 				$('.container').click(function(){
 					$('.container').animate({'margin-left': '0px', 'opacity': 1}, 300);
@@ -251,6 +279,7 @@ function loadScript() {
 			$('body').css('overflow', 'hidden');
 			open = true;
 		} else if(open == true){
+			$('.menu-button').removeClass('open');
 			$('.container').animate({'margin-left': '0px', 'opacity': 1}, 300);
 			$('.overlay-menu').stop().animate({'right': '-240px'}, 300, function(){
 				$(this).css('display', 'none')	;
@@ -268,7 +297,7 @@ function loadScript() {
 	var theForm = '<div class="wireframe-form"><form class="cmxform" id="commentForm" method="get" action=""><p><label for="cname">Name (required, at least 2 characters)</label><input id="cname" name="name" minlength="2" type="text" required/></p><p><label for="cemail">E-Mail (required)</label><input id="cemail" type="email" name="email" required/></p><p><label for="cphone">Phone No. (required)</label><input id="cphone" type="text" name="phone" required/></p><p><label for="ccomment">Your Comments (required)</label><textarea id="ccomment" name="comment" required></textarea></p><p style="text-align:right;width:100%x"><input class="submit" type="submit" value="Submit"/></p></form><div class="cf"></div></div>';
 	$(this).click(function(){
 		$('#wireframe').css({'display': 'block', 'height': $(window).height()+'px', 'width': $(window).width()+'px'}).append(theForm).stop().animate({'opacity': 1}, 300).click(function(e){
-			if(e.target.id == 'wireframe'){
+			if(e.target.id == 'wireframe' || e.target.id == 'close'){
 				$(this).animate({'opacity': 0}, 300, function(){
 					$('.wireframe-form').remove();
 					$(this).css('display', 'none');
@@ -279,7 +308,7 @@ function loadScript() {
 			errorElement: 'div',
 			submitHandler: function(form){
 				$.ajax({
-					url : 'http://localhost/shenstone-homes/scripts/mail_.php',
+					url : '../scripts/mail_.php',
 					data : $('#commentForm').serialize(),
 					type: 'POST',
 					success : function(data){

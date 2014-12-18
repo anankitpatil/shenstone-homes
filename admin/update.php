@@ -3,7 +3,7 @@ define("UPLOAD_DIR", "/Applications/XAMPP/xamppfiles/htdocs/shenstone-homes/uplo
 if(isset($_REQUEST))
 {
 	$connection = mysql_connect('localhost', 'root', '');
-	mysql_select_db('shenstone-homes', $connection);
+	mysql_select_db('agriwash', $connection);
 	error_reporting(E_ALL && ~E_NOTICE);
 	
 	$id = $_POST['id'];
@@ -36,11 +36,10 @@ if(isset($_REQUEST))
 	}
 	
 	if($img == 1){
-		$sql = "UPDATE properties SET title = '$title', price = '$price', content = '$content' $names[1] $names[2] $names[3] $names[4] $names[5] WHERE id = '$id'";
+		$sql = "UPDATE sh_properties SET title = '$title', price = '$price', content = '$content' $names[1] $names[2] $names[3] $names[4] $names[5] WHERE id = '$id'";
 	} else {
-		$sql = "UPDATE properties SET title = '$title', price = '$price', content = '$content' WHERE id = '$id'";
+		$sql = "UPDATE sh_properties SET title = '$title', price = '$price', content = '$content' WHERE id = '$id'";
 	}
-	echo $sql;
 	
 	$result = mysql_query($sql);
 	if($result){

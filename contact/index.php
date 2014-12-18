@@ -1,5 +1,6 @@
 <?php include '../meta.php'; ?>
 <title>Shenstone Homes | Contact</title>
+<meta name="description" content="Shenstone Homes is a propert management and lettings agency which has been established for over 12 years,  with Javad Hosseini’s 30 years experience as a Consultant Structural Engineer. Please contact us if you would like to discuss any aspect of our property business, it would be great to hear from you. You can contact us by telephone, facsimile, e-mail or by using the online form provided. 127 Leasowe Road, Wallasey, Wirral, CH45 8PA.">
 <?php include '../header.php'; ?>
     <div class="wrapper" id="contact">
       <div class="one">
@@ -13,7 +14,7 @@
           T. 0151 639 0055<br />
           F. 0151 346 8945</p></div><div class="map" id="map-canvas"></div>
       </div><div class="three">
-        <figure><img src="../assets/contact_s.jpg" /></figure>
+        <figure><img src="../assets/contact_s.jpg" alt="Shenstone Homes Properties. Management and letting. Design and build. Contact details. Phone, email and map directions." /></figure>
       </div>
       <div class="two">
         <h1>Contact Us</h1>
